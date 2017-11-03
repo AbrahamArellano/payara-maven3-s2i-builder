@@ -3,7 +3,8 @@
 set -e
 
 echo "---> Starting Payara application"
-java -jar payara-micro-4.1.1.163.jar --deploy `find * -name *.war`
+echo "---> Listing installations: " `find * -name *.war`
+java -jar payara-micro-4.1.1.163.jar --deploy `find * -name ping.war`
 
 # Fix source directory permissions
 fix-permissions ./
