@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -e
 
-echo "---> In run script nothing to do"
+echo "---> Starting Payara application"
+
+java -jar payara-micro-4.1.1.163.jar --deploy `find /tmp/ -name ping.war`
+
 
